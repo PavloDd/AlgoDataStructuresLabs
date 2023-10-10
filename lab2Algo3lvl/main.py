@@ -21,6 +21,6 @@ def min_square_size(N, W, H):
 N, W, H = map(int, input().split())
 
 
-print(min_square_size(N, W, H))
+print(min_square_size(N, W, H)) #print
 
 
