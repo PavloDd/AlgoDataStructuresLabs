@@ -6,18 +6,18 @@ class BinaryTree:
 
 
 def is_tree_balanced(node: BinaryTree) -> bool:
-    def check_balanced_and_height(node):
+    def check_balanced(node):
         if node is None:
             return True, 0
 
-        left_balanced, left_height = check_balanced_and_height(node.left)
-        right_balanced, right_height = check_balanced_and_height(node.right)
+        l_balanced, l_height = check_balanced(node.left)
+        r_balanced, r_height = check_balanced(node.right)
 
-        balanced = left_balanced and right_balanced and abs(left_height - right_height) <= 1
-        height = max(left_height, right_height) +1
+        balanced = l_balanced and r_balanced and abs(l_height - r_height) <= 1
+        height = max(l_height, r_height) + 1
         return balanced, height
 
-    balanced, _ = check_balanced_and_height(node)
+    balanced, _ = check_balanced(node)
     return balanced
 
 root = BinaryTree(3)
