@@ -1,3 +1,4 @@
+
 class Graph:
     def __init__(self):
         self.graph = {}
@@ -38,7 +39,7 @@ def read_input(file_path):
 #              ['Луцьк', 'Тернопіль'], ['Долина', 'Львів'], ['Тернопіль', 'Долина']]
 
 
-cities, storage, pipelines = read_input("./src/input.txt")
+cities, storage, pipelines = read_input("C:/Users/Lenovo/AlgoDataStructuresLabs/AlgoDataStructuresLabs/lab5Algov3/src/input.txt")
 
 # Створення графу
 gas_network = Graph()
@@ -91,6 +92,6 @@ def bfs_gas_supply(graph, storage):
 result = bfs_gas_supply(gas_network.graph, storage)
 
 
-with open("./src/output.txt", 'w', encoding='utf-8') as file:
+with open("C:/Users/Lenovo/AlgoDataStructuresLabs/AlgoDataStructuresLabs/lab5Algov3/src/output.txt", 'w', encoding='utf-8') as file:
     for r in result:
         file.write(','.join(map(str, r)) + '\n')
